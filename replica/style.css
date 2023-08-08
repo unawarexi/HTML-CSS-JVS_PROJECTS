@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding:0;
+    outline:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #7F56D9;
+    --secondary: #F4EBFF;
+    --text-primary: #101828;
+    --text-secondary: #667085;
+    --badge-bg: #ECFDF3;
+    --badge-text: #027A48;
+    --white: #fff;
+    --dropdown-bg: rgb(252, 253, 251);
+    --shadow: rgba(32, 7, 65, 0.14);
+    --container: 124rem;
+    --nav-height: 7rem;
+}
+
+
+.container{
+    width:100vw;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+
+.nav_list{
+   display: inline-flex;
+   gap: 1.2rem;
+   padding: 30px;
+    
+}
+
+ .nav_list span {
+    font-weight: bold;
+}
+
+.nav_list a{
+    text-decoration: none;
+    color:#000;
+}
+
+.nav_list a:hover{
+    color: var(--primary);
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-radius: 15px;
+    background: var(--dropdown-bg);
+    padding: 0.5rem 0.5rem;
+    box-shadow: 3px 3px 3px 3px #000;
+}
+
+
+
+.btn_primary {
+    padding: 10px;
+    margin-right: 20px;
+    
+
+}
+
+.btnn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+}
+.btnn1 {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border-style: none;
+    font-weight: bold;
+    background-color: var(--primary);
+    color:#fff;
+}
+
+
+
+
+.drop_down{
+    position:absolute;
+    top: var(--nav-height);
+    left:0;
+    width:100%;
+    background: var(--dropdown-bg);
+    box-shadow: 5px 5px 5px 3px var(--shadow);
+    clip-path:polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 1s ease-in-out;
+    border-radius: 10px;   
+  
+}
+
+.inner_dropdown{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap:1rem;
+    padding:2rem;
+    
+}
+    
+
+.dropdown_item{
+    margin:0 auto;
+}
+
+
+.nav_list_menu:hover .drop_down {
+    clip-path: polygon(0 0, 100% 0, 100% 102%, 0 102%);
+}
+
+.item_list {
+    display: flex;
+    gap:1rem;
+    padding: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    text-align: justify;   
+    
+    
+}
+
+
+.item_img{
+    clip-path:circle();
+    background: var(--secondary);
+    height: 3rem;
+    width:3rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.item_img:hover{
+    transform: rotate(270deg);
+    cursor: pointer;
+    transition: 1s all ease;
+}
+
+.item_info{
+    position: relative;
+    width:100%;
+}
+
+.item_badge{
+    position: absolute;
+    right: -2.3rem;
+    border-radius: 10px;
+    background: var(--badge-bg);
+    padding: 0.1rem 0.5rem;
+    top:0;
+    color:var(--badge-text);
+}
+
+
+.back2_img {
+    display: grid;
+    width:100vw;
+    grid-template-columns: repeat(2, 1fr);
+    
+
+}
+
+.imag{
+    display: flex;
+
+}
+
+.image1{
+    height: 400px;
+    
+   
+}
+
+.image1_info{   
+    top: 50%;
+}
+
+.image1_info h3{
+    font-weight: bold;
+    font-size: 30px;
+    font-family:verdana;
+    color: var(--primary);
+    text-align: center;
+    
+    
+}
+
+.image1_info p{
+    top: 30px;
+    
+}
+.imag2 {
+}
+
+
+
+.image2{
+    height: 300px;
+
+}
+
+.division{
+    background: rgb(249, 242, 242);
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sec h3{
+    padding-top: 3rem;
+    justify-content: center;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+.sec p{
+    padding-top: 0.9rem;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.sec1{
+    margin-left: 70px;
+    padding: 2rem;
+   
+}
+
+.sec1_imgg {
+    padding: 2rem;
+    height: 230px;
+    background: #F4EBFF;
+}
+
+
+
+
+.third_division {
+    overflow: hidden;
+    position: relative;
+}
+
+.third_bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.918), rgba(0, 0, 0, 0.918));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 500px;
+    max-width: 100%;
+    filter: blur(30px);
+}
+
+.third {
+    position: absolute;
+    top: 0;
+}
+
+.third1_div {
+    position: relative;
+    background-image: linear-gradient((#000, #000));
+
+}
+
+.third_image {
+    height: 500px;
+    width:100%;
+   
+}
+
+
+.thr_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.thr_info h3 {
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.thr_inf {
+    padding: 1rem;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.third2_div {
+    margin: 2rem;
+    right: 50%;
+}
+
+.third2_div h3 {
+    text-align: center;
+    justify-content: center;
+}
+
+.third2_div ul {
+    padding: 2rem;
+    line-height: 2rem;
+}
+
+.third2_div ul li {
+    list-style: none;
+    display: block;
+    padding: 0.5rem;
+}
+.target {
+    height: 200px;
+}
+
+.bars i {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/*============================== RESPONSIVENESS =====================================*/
+
+
+/* Portrait and Landscape */
+@media screen and (min-width: 200px) 
+{
+
+    /* Android Phone */
+    .back2_img {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .sec1{
+        justify-content: center;
+        margin-left: 70px;
+
+    
+    }
+
+    .sec1_imgg{
+        height: 250px;
+    }
+
+    .nav_list {
+        display: -100%;
+    }
+
+    .bars i {
+        display: flex;
+    }
+
+    .btn_primary {
+       display: flex; 
+       gap: 0.8rem; 
+       white-space: nowrap;  
+    }
+
+    .btnn {
+        padding: 0.5rem 0.8rem;
+        border-radius: 10px;
+       
+    }
+    .btnn1 {
+        padding: 0.5rem 0.8rem;
+        border-radius: 10px;
+       
+    }
+
+    
+
+
+    
+    
+    
+    
+    
+
+    
+
+}
+
+
+/* Portrait and Landscape */
+@media screen and (min-width: 800px) 
+{
+
+    /* Galaxy Tab */
+    .back2_img {
+        display: grid;
+        width:100vw;
+    
+    }
+}
+
+
+
+
+@media screen and (min-width: 1350px) {
+    /* Laptop */
+   
+}
