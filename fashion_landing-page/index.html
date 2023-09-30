@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lave & nder</title>
+    <link rel="stylesheet" href="./style/styles.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- overlay -->
+      <div class="overlay first"></div>
+      <div class="overlay second"></div>
+      <div class="overlay third"></div>
+
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <div class="menu">
+          <ion-icon name="ios-menu"></ion-icon>
+        </div>
+
+        <div class="lang">eng</div>
+        <div class="search">
+          <ion-icon name="ios-search"></ion-icon>
+        </div>
+      </nav>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="media">
+        <ul>
+          <li>facebook</li>
+          <li>instagram</li>
+          <li>twitter</li>
+        </ul>
+      </div>
+
+      <!-- TEXT -->
+      <div class="text">
+        <h1>
+          <span class="hideText"> Lav&nder </span>
+        </h1>
+
+        <h2>luxury</h2>
+        <h3>
+          <span class="hideText">
+            collection 2023 <br />
+            luxury
+          </span>
+        </h3>
+
+        <p>
+          <span class="hideText">
+            "Step into the world of Lavender Fashion, where elegance meets
+            style, and every outfit blooms with timeless grace and allure."
+          </span>
+        </p>
+      </div>
+
+      <!-- SPONSOR -->
+      <div class="sponsor">
+        <img src="./img/sponsor-logo.png" alt="" />
+        <p>Official sponsor</p>
+      </div>
+
+      <!-- DISTORTION -->
+      <!-- the canvas layer where we are going to load those images -->
+      <div class="distortions"></div>
+    </div>
+
+    <!-- icons -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <!-- three js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+      integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Hover effect js -->
+    <!-- it is plugin used to have that nice hover effect animation -->
+    <script src="./js/hover-effect.umd.js"></script>
+
+    <!-- Let create the canvas using hoverEffect -->
+    <script>
+      // Loading images into the canvas
+      new hoverEffect({
+        parent: document.querySelector(".distortions"),
+        intensity: 0.2,
+        image1: "./img/1.png",
+        image2: "./img/2.png",
+        displacementImage: "./img/diss.png",
+        imagesRatio: 380 / 300,
+      });
+
+      //    NAVBAR
+      TweenMax.staggerFrom(
+        ".navbar div",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          y: "20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // MEDIA
+      TweenMax.staggerFrom(
+        ".media ul li",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          x: "-20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // TEXT
+      TweenMax.from(
+        ".text h1 .hideText",
+        1.5,
+        {
+          delay: 1,
+          y: "100%",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(
+        ".text h3 .hideText",
+        1.5,
+        {
+          delay: 1.2,
+          y: "100%",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(
+        ".text p .hideText",
+        1.5,
+        {
+          delay: 1.2,
+          y: "100%",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(
+        ".text h2",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          x: "-10000",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // SPONSOR
+
+      TweenMax.from(
+        ".sponsor img",
+        1.5,
+        {
+          delay: 1.5,
+          opacity: 0,
+          y: "20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      TweenMax.from(
+        ".sponsor p",
+        1.5,
+        {
+          delay: 1.6,
+          opacity: 0,
+          y: "20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // DISTORTION
+      TweenMax.from(
+        ".distortions",
+        1.5,
+        {
+          delay: 2,
+          opacity: 0,
+          y: "20",
+          ease: Expo.easeInOut,
+        },
+        0.08
+      );
+
+      // OVERLAY
+      TweenMax.to(".first", 1.5, {
+        delay: 0.5,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".second", 1.5, {
+        delay: 0.7,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".third", 1.5, {
+        delay: 0.9,
+        top: "-100%",
+        ease: Expo.easeInOut,
+      });
+    </script>
+  </body>
+</html>
