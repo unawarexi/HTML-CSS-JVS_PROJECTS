@@ -11,4 +11,5 @@
 
 Follow me on:
 
-find me on linkedlin : [Andrew C.J](https://linked)
+find me on linkedlin : [Andrew C.J]( https://linkedin.com/in/https://www.linkedin.com/in/andrew-j-chukwuweike-se )
+  
